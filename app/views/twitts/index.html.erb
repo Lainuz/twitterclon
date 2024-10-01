@@ -1,24 +1,34 @@
+<div class="mt-5 pt-3">
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Twitts" %>
 
-<h1>Twitts</h1>
-
-<div>
-  <%= form_with url: twitts_path, method: :get do |form|%>
-    <%= form.text_field :query_text, placeholder: ('Query text'), value: params[:query_text]%>
-  <% end %>
+<%= form_with url: twitts_path, method: :get do |form| %>
+<div class="row">
+<div class="col-auto">
+    <%= form.text_field :query_text, placeholder: ('usuario o twitt'), value: params[:query_text], class:"form-control" %>
 </div>
+ <div class="col-2">
+    <button class="btn btn-success btn-sm" type="submit">Buscar</button> 
+  </div>
+</div>
+<% end %>
 
-<div id="twitts">
+<div id="twitts" class="my-4">
   <% @twitts.each do |twitt| %>
     <%= render twitt %>
-    <p>
-      <%= link_to "Ver este twitt", twitt %>
-    </p>
+    <div class="mb-3">
+      <%= link_to "Ver twitt", twitt %>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "Nuevo twitt", new_twitt_path %>
 
-<%=raw pagy_nav(@pagy)%>
+<div class="my-5">
+<nav aria-label="Page navigation example">
+<ul class="pagination">
+<li class="page-link"><%=raw pagy_nav(@pagy) %></li>
+</ul>
+</div>
+
+</div>

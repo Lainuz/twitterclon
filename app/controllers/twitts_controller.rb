@@ -18,7 +18,7 @@ class TwittsController < ApplicationController
 
   # GET /twitts/new
   def new
-    @twitt = Twitt.new
+    @twitt = Twitt.new   
   end
 
   # GET /twitts/1/edit
@@ -31,7 +31,7 @@ class TwittsController < ApplicationController
 
     respond_to do |format|
       if @twitt.save
-        format.html { redirect_to @twitt, notice: "Twitt was successfully created." }
+        format.html { redirect_to @twitt, notice: "Twitt creado exitosamente" }
         format.json { render :show, status: :created, location: @twitt }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -44,13 +44,13 @@ class TwittsController < ApplicationController
   def update
     respond_to do |format|
       if @twitt.update(twitt_params)
-        format.html { redirect_to @twitt, notice: "Twitt was successfully updated." }
+        format.html { redirect_to @twitt, notice: "Twitt editado con éxito." }
         format.json { render :show, status: :ok, location: @twitt }
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @twitt.errors, status: :unprocessable_entity }
       end
-    end
+    end     
   end
 
   # DELETE /twitts/1 or /twitts/1.json
@@ -58,9 +58,9 @@ class TwittsController < ApplicationController
     @twitt.destroy!
 
     respond_to do |format|
-      format.html { redirect_to twitts_path, status: :see_other, notice: "Twitt was successfully destroyed." }
+      format.html { redirect_to twitts_path, status: :see_other, notice: "Twitt ha sido eliminado." }
       format.json { head :no_content }
-    end
+    end    
   end
 
   private

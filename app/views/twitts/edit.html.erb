@@ -1,12 +1,12 @@
 <% content_for :title, "Editing twitt" %>
 
-<h1>Editing twitt</h1>
+<h3 class="my-5 pt-5">Editando twitt</h3>
 
 <%= render "form", twitt: @twitt %>
 
 <br>
 
 <div>
-  <%= link_to "Show this twitt", @twitt %> |
-  <%= link_to "Back to twitts", twitts_path %>
+  <%= link_to "ver twitt", @twitt, class:"btn btn-success btn-sm" %> |
+  <%= link_to "Volver a los twitts", twitts_path, class:"btn btn-primary btn-sm" %>
 </div>
