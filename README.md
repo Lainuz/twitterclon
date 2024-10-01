@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+* Ruby version 3.3.4
 
-* Ruby version
+* clonar repositorio https://github.com/Lainuz/twitterclon.git o descargar ZIP.
+* Entrar al directorio /twitterclon
+* Ejecutar comando "bundle install"
+* Modificar archivo database.yml para dar acceso a la base de datos.
+* Ejecutar rails db:create db:migrate db:seed
+* Ejecutar comando "rails assets:precompile"
+* Levantar aplicación con comando "rails s"
+* Revisar en navegador aplicación en localhost:3000
 
-* System dependencies
+* Repositorio github https://github.com/Lainuz/twitterclon
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Aplicación se encuentra en Render:
+   https://mysite-mq1f.onrender.com
