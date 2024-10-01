@@ -3,8 +3,8 @@
 <%= render @twitt %>
 
 <div>
-  <%= link_to "Edit this twitt", edit_twitt_path(@twitt) %> |
-  <%= link_to "Back to twitts", twitts_path %>
+  <%= link_to "Editar twitt", edit_twitt_path(@twitt) %> |
+  <%= link_to "Volver a todos los twitt", twitts_path %>
 
-  <%= button_to "Destroy this twitt", @twitt, method: :delete %>
+  <%= button_to "Eliminar twitt", @twitt, method: :delete %>
 </div>

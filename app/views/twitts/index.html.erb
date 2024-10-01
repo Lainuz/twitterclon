@@ -4,21 +4,21 @@
 
 <h1>Twitts</h1>
 
+<div>
+  <%= form_with url: twitts_path, method: :get do |form|%>
+    <%= form.text_field :query_text, placeholder: ('Query text'), value: params[:query_text]%>
+  <% end %>
+</div>
+
 <div id="twitts">
   <% @twitts.each do |twitt| %>
     <%= render twitt %>
     <p>
-      <%= link_to "Show this twitt", twitt %>
+      <%= link_to "Ver este twitt", twitt %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New twitt", new_twitt_path %>
-
-<div>
-<%= form_with url: twitts_path, method: :get do |form|%>
-    <%= form.text_field :query_text, placeholder: ('Query text'), value: params[:query_text]%>
-<% end %>
-</div>
+<%= link_to "Nuevo twitt", new_twitt_path %>
 
 <%=raw pagy_nav(@pagy)%>
