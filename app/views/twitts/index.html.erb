@@ -15,4 +15,10 @@
 
 <%= link_to "New twitt", new_twitt_path %>
 
+<div>
+<%= form_with url: twitts_path, method: :get do |form|%>
+    <%= form.text_field :query_text, placeholder: ('Query text'), value: params[:query_text]%>
+<% end %>
+</div>
+
 <%=raw pagy_nav(@pagy)%>

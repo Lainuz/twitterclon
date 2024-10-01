@@ -7,7 +7,9 @@ class TwittsController < ApplicationController
 
     @pagy, @twitts = pagy(Twitt.all)
 
-
+    if params[:query_text].present?
+      @twitts = Twitt.search_full_text(params[:query_text])
+    end
   end
 
   # GET /twitts/1 or /twitts/1.json
